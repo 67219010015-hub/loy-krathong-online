@@ -1,0 +1,17 @@
+{
+  "name": "loy-krathong-online",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "start": "http-server -p 3000 -o"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "install": "^0.13.0"
+  }
+}

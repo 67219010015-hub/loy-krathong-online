@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #090d16, #1b2845);
+  color: #fff;
+}
+
+.sky {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.moon {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  width: 80px;
+  height: 80px;
+  background: #fff6cc;
+  border-radius: 50%;
+  box-shadow: 0 0 40px #ffea85;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #ffd700;
+  text-shadow: 0 2px 10px rgba(255, 215, 0, 0.5);
+}
+
+.control-panel {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.krathong-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.option {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #f59e0b, #fbbf24);
+  color: #111;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+/* ส่วนแม่น้ำ */
+.river {
+  height: 42vh;
+  background: linear-gradient(to bottom, #0f2942, #071524);
+  position: relative;
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+/* ตัวกระทงที่ลอยบนหน้าจอ */
+.krathong-item {
+  position: absolute;
+  left: -250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: floatAcross 22s linear forwards, bobbing 2.5s ease-in-out infinite;
+}
+
+.wish-card {
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid #ffd700;
+  padding: 6px 12px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 220px;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+}
+
+.wish-card strong {
+  color: #ffd700;
+  display: block;
+}
+
+.krathong-icon {
+  font-size: 3.2rem;
+  filter: drop-shadow(0 0 10px rgba(255, 200, 0, 0.8));
+}
+
+@keyframes floatAcross {
+  from { left: -250px; }
+  to { left: 110vw; }
+}
+
+@keyframes bobbing {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ลอยกระทงออนไลน์</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky">
+    <div class="moon"></div>
+    <header>
+      <h1>🌕 ลอยกระทงออนไลน์ 🪷</h1>
+      <p>ร่วมสืบสานประเพณีไทย อธิษฐานขอพรผ่านสายน้ำ</p>
+    </header>
+
+    <form id="krathong-form" class="control-panel">
+      <div class="form-group">
+        <label>เลือกแบบกระทง:</label>
+        <div class="krathong-options">
+          <label class="option">
+            <input type="radio" name="krathongType" value="🪷" checked>
+            <span>🪷 ดอกบัว</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="krathongType" value="🌿">
+            <span>🌿 ใบตอง</span>
+          </label>
+          <label class="option">
+            <input type="radio" name="krathongType" value="🥥">
+            <span>🥥 กะลามะพร้าว</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="userName" placeholder="ชื่อของคุณ..." required maxlength="30">
+      </div>
+      <div class="form-group">
+        <input type="text" id="userWish" placeholder="พิมพ์คำอธิษฐาน..." required maxlength="80">
+      </div>
+      <button type="submit">ปล่อยกระทงลงน้ำ ✨</button>
+    </form>
+  </div>
+
+  <main id="river" class="river">
+    <!-- กระทงจะถูกสร้างและลอยในพื้นที่นี้ -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
